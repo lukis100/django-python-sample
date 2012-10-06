@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>P2S</title></head>
+
+<body>
+	
+  <center><a href="parse/">Parse Feed</a></center>
+  
+  {% if HILMP_records %}
+  HILMP_records
+  <table border="1">
+	<tr>
+	  <th>Name</th>
+	  <th>LMP</th>
+	  <th>MCC</th>
+	  <th>MLC</th>
+	</tr>
+	
+	{% for record in HILMP_records %}
+	<tr>
+	  <td>{{ record.name }}</td>
+	  <td>{{ record.LMP }}</td>
+	  <td>{{ record.MCC }}</td>
+	  <td>{{ record.MLC }}</td>
+	</tr>
+	{% endfor %}
+	
+  </table>
+  {% endif %}
+  
+  <p></p>
+  
+  {% if DALMP_records %}
+  DALMP_records
+  <table border="1">
+	<tr>
+	  <th>Name</th>
+	  <th>LMP</th>
+	  <th>MCC</th>
+	  <th>MLC</th>
+	</tr>
+	
+	{% for record in DALMP_records %}
+	<tr>
+	  <td>{{ record.name }}</td>
+	  <td>{{ record.LMP }}</td>
+	  <td>{{ record.MCC }}</td>
+	  <td>{{ record.MLC }}</td>
+	</tr>
+	{% endfor %}
+	
+  </table>
+  {% endif %}
+
+</body>
+</html>
